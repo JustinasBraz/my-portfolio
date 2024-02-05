@@ -97,7 +97,7 @@ section.home {
 
 .home-content {
     display: relative;
-    z-index: 0;
+    z-index: 10;
     max-width: 600px;
 
 }
@@ -124,7 +124,7 @@ height: 50%;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-services .service h2 {
+.services .service h2 {
     font-size: 24px;
     font-weight: 500;
     margin-top: 20px;
@@ -383,5 +383,5 @@ section {
     position: absolute;
     bottom: 20px;
     transform: scale(0.5);
-    max-width: 880px;
+
 }
