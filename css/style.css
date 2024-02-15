@@ -344,9 +344,23 @@ section {
 
 .navigation ul li a {
     font-size: 2rem;
+    justify-content: flex-start;
+}
+.navigation .social-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+    background: #d8e4e1;
+    
+    
 
 }
-
 
 .contact {
     flex-direction: row;
@@ -439,6 +453,25 @@ margin: 0;
         
     
     }
+    .contact {
+        flex-direction: row;
+    }
+    .contact-form {
+        width: 100%;
+        padding: 30px 30px 20px;
+    }
+    .contact-form .row {
+        flex-direction: column;
+    }
+    
+    
+    .contact-form .input50,
+    .contact-form .input100 {
+    width: 100%;
+    margin: 0;
+    }
+    
+    
 }
 
 
