@@ -179,8 +179,9 @@ height: 50%;
   
   .portfolio .item {
     position: relative;
-    width: 500px;
-    height: 500px;
+    width: calc(100% - 10px);
+    max-width: 500px;
+    height: auto;
     margin: 15px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     padding: 30px;
@@ -267,6 +268,7 @@ height: 50%;
     margin: 10px 0;
     resize: none;
    border-radius: 20px;
+   resize: none;
 
 }
 .contact-form .row textarea {
@@ -327,6 +329,10 @@ cursor: pointer;
     
         
     }
+    .portfolio-section {
+        grid-template-columns: 1fr;
+      }
+    
 
 .logo {
 
@@ -342,59 +348,42 @@ section {
 
 }
 
-.navigation ul li a {
-    font-size: 2rem;
-    justify-content: flex-start;
-}
-.navigation .social-bar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200px;
-    height: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    
-    background: #d8e4e1;
-    
-    
 
-}
+
 
 .contact {
-    flex-direction: row;
-}
-.contact-form {
+    flex-direction: column;
+  }
+
+  .contact-form {
     width: 100%;
     padding: 30px 30px 20px;
-}
-.contact-form .row {
+  }
+
+  .contact-form .row {
     flex-direction: column;
+  }
+
+  .contact-form .input50,
+  .contact-form .input100 {
+    width: 100%;
+    margin: 0;
+  }
+
+  .contact-info {
+    width: 100%;
+    margin-top: 20px;
+    padding: 30px 30px 20px;
+  }
+
+
 }
 
-
-.contact-form .input50,
-.contact-form .input100 {
-width: 100%;
-margin: 0;
-}
-
-
-}
-
-@media  (max-width: 768px) {
-    
-    .portfolio-section {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
-        gap: 20px;
-        
-      }
+@media  (max-width: 767px) {
     
       .image-container {
         flex-direction: column;
-        align-items: cent;
+        align-items: center;
       }
     
       .image-container img {
@@ -407,13 +396,14 @@ margin: 0;
       .text-container {
         padding-left: 0;
         margin-left: 0px;
-        text-align: center;
+        align-content: center;
         justify-content: center;
+      
       }
 
     .home-img {
         display: grid;
-        padding-bottom: 10rem 10rem;
+        padding-bottom: 25rem 25rem;
         left: 5rem;
     
     
@@ -426,123 +416,104 @@ margin: 0;
         max-width: 600px;
         top: 22rem;
     
-        
     }
-    .portfolio-item {
-        flex: 1 1 100%; /* Full width on smaller screens */
-      }
+  
+     /* Change flex direction to column for stacking items vertically */
+  .portfolio-section {
+    flex-direction: column;
+    align-items: center;
+  }
 
-      .navigation ul li a {
-        font-size: 2rem;
-        justify-content: flex-start;
-    
-    }
-
-    .navigation .social-bar {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 200px;
-        height: 100%;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        
-        background: #d8e4e1;
-        
-        
-    
-    }
-    .contact {
-        flex-direction: row;
-    }
-    .contact-form {
-        width: 100%;
-        padding: 30px 30px 20px;
-    }
-    .contact-form .row {
-        flex-direction: column;
-    }
-    
-    
-    .contact-form .input50,
-    .contact-form .input100 {
-    width: 100%;
-    margin: 0;
-    }
-    
-    
+  /* Increase margin between image and text */
+  .image-container {
+    margin-bottom: 40px;
+  }
+  
+  .portfolio .item {
+    width: calc(100% - 10px); /* Adjust based on your desired column count */
+  }
+  .navigation {
+    justify-content: flex-start;
+  
 }
-
-
-/*NAVIGATION*/
 
 .navigation {
-    position: fixed;
-    top: 0;
-    left: 100%;
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-    z-index: 15;
-    display: flex;
-    justify-content:center;
-    align-items: center;
+  justify-content: flex-start;
+  padding-top: 50px; /* Adjust padding-top */
 }
 
-.navigation.active {
-    left: 0;
-}
-.navigation ul {
-    position: relative;
-}
-.navigation ul li {
-    position: relative;
-    list-style: none;
-    text-align: center;
-}
-
-.navigation ul li  a {
-    font-size: 2.2rem;
-    color: #111;
-    text-decoration: none;
-    font-weight: 300;
-
-}
-.navigation ul li  a:hover {
-    color: var(--primary-color);
-}
 .navigation .social-bar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200px;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    background: #d8e4e1;
-    
-    
-
+  top: 100px; /* Adjust top position */
+  right: auto;
+  left: 10px; /* Adjust left position */
+  flex-direction: row; /* Change direction to horizontal */
+  align-items: center;
 }
 
 .navigation .social-bar a {
-    display: inline-block;
-    transform: scale(0.5);
-    margin: -38px;
-    margin-left: 0.5rem;
-    
-    
-    
+  margin-right: 10px; /* Adjust spacing between icons */
+}
+}
+/*NAVIGATION*/
 
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 15;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.navigation.active {
+  left: 0;
+}
+
+.navigation ul {
+  position: relative;
+}
+
+.navigation ul li {
+  position: relative;
+  list-style: none;
+  text-align: center;
+}
+
+.navigation ul li a {
+  font-size: 2.2rem;
+  color: #111;
+  text-decoration: none;
+  font-weight: 300;
+}
+
+.navigation ul li a:hover {
+  color: var(--primary-color);
+}
+
+.navigation .social-bar {
+  position: absolute;
+  top: 0;
+  left: 0; /* Adjusted to position on the side */
+  height: 100%;
+  display: flex;
+  flex-direction: column; /* Arrange items vertically */
+  justify-content: center;
+  align-items: center;
+  background: #d8e4e1;
+}
+
+.navigation .social-bar a {
+  display: inline-block;
+  transform: scale(0.5);
+  margin-bottom: 25px; /* Adjusted for spacing */
+}
 
 .navigation .email-icon {
-    position: absolute;
-    bottom: 20px;
-    transform: scale(0.5);
+  position: absolute;
+  bottom: 45px;
+  transform: scale(0.5);
 }
-
