@@ -432,8 +432,7 @@ section {
   .portfolio .item {
     width: calc(100% - 10px); /* Adjust based on your desired column count */
   }
-  .navigation {
-    justify-content: flex-start;
+  
   
 }
 
@@ -453,7 +452,7 @@ section {
 .navigation .social-bar a {
   margin-right: 10px; /* Adjust spacing between icons */
 }
-}
+
 /*NAVIGATION*/
 
 .navigation {
