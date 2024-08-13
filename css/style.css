@@ -579,7 +579,7 @@ justify-content: center;
   flex-direction: column; /* Arrange items vertically */
   justify-content: center;
   align-items: center;
-  background: #d8e4e1;
+  background: #FAF5F5;
 }
 
 .navigation .social-bar a {
